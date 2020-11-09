@@ -1,4 +1,8 @@
 
+1.0.1
+
+[BUGFIX] fixed default route configuration
+
 1.0.0
 
 [TASK] code base, implemented route for Pardot form handler requests
