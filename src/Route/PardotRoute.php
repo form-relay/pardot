@@ -38,41 +38,44 @@ class PardotRoute extends RequestRoute
     {
         $defaults = parent::getDefaultConfiguration();
         $defaults[static::KEY_SEND_VISITOR_COOKIES] = static::DEFAULT_SEND_VISITOR_COOKIES;
-        $defaults['fields']['mapping'] = [
-            'source' => 'source',
+        $defaults['fields'] = [
+            'source' => ['field' => 'source'],
 
-            'salutation' => 'salutation',
-            'first_name' => 'first_name',
-            'last_name' => 'last_name',
+            'salutation' => ['field' => 'salutation'],
+            'first_name' => ['field' => 'first_name'],
+            'last_name' => ['field' => 'last_name'],
 
-            'email' => 'email',
-            'phone' => 'phone',
-            'fax' => 'fax',
+            'email' => ['field' => 'email'],
+            'phone' => ['field' => 'phone'],
+            'fax' => ['field' => 'fax'],
 
-            'company' => 'company',
-            'industry' => 'industry',
-            'department' => 'department',
-            'job_title' => 'job_title',
-            'website' => 'website',
-            'annual_revenue' => 'annual_revenue',
-            'years_in_business' => 'years_in_business',
-            'employees' => 'employees',
+            'company' => ['field' => 'company'],
+            'industry' => ['field' => 'industry'],
+            'department' => ['field' => 'department'],
+            'job_title' => ['field' => 'job_title'],
+            'website' => ['field' => 'website'],
+            'annual_revenue' => ['field' => 'annual_revenue'],
+            'years_in_business' => ['field' => 'years_in_business'],
+            'employees' => ['field' => 'employees'],
 
-            'address_one' => 'address_one',
-            'address_two' => 'address_two',
-            'zip' => 'zip',
-            'city' => 'city',
-            'state' => 'state',
-            'country' => 'country',
-            'territory' => 'territory',
+            'address_one' => ['field' => 'address_one'],
+            'address_two' => ['field' => 'address_two'],
+            'zip' => ['field' => 'zip'],
+            'city' => ['field' => 'city'],
+            'state' => ['field' => 'state'],
+            'country' => ['field' => 'country'],
+            'territory' => ['field' => 'territory'],
 
-            'is_do_not_call' => 'is_do_not_call',
-            'is_do_not_email' => 'is_do_not_email',
-            'opted_out' => 'opted_out',
-        ];
-        $defaults['fields']['unmapped'] = [
-            SubmissionConfigurationInterface::KEY_SELF => 'comments',
-            'appendKeyValue' => true,
+            'is_do_not_call' => ['field' => 'is_do_not_call'],
+            'is_do_not_email' => ['field' => 'is_do_not_email'],
+            'opted_out' => ['field' => 'opted_out'],
+            'comments' => [
+                'fieldCollector' => [
+                    'exclude' => '',
+                    'ignoreIfEmpty' => true,
+                    'unprocessedOnly' => true,
+                ],
+            ],
         ];
         return $defaults;
     }
