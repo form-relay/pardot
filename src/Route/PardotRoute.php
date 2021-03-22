@@ -27,7 +27,7 @@ class PardotRoute extends RequestRoute
     {
         /** @var RequestDataDispatcher $dispatcher */
         $dispatcher = parent::getDispatcher();
-        if ($this->getConfig(static::KEY_SEND_VISITOR_COOKIES, static::DEFAULT_SEND_VISITOR_COOKIES)) {
+        if ($this->getConfig(static::KEY_SEND_VISITOR_COOKIES)) {
             $cookies = $this->getVisitorCookies();
             $dispatcher->addCookies($cookies);
         }
