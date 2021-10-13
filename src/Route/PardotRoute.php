@@ -2,11 +2,6 @@
 
 namespace FormRelay\Pardot\Route;
 
-use FormRelay\Core\DataDispatcher\DataDispatcherInterface;
-use FormRelay\Core\Model\Submission\Submission;
-use FormRelay\Core\Model\Submission\SubmissionConfigurationInterface;
-use FormRelay\Core\Model\Submission\SubmissionInterface;
-use FormRelay\Request\DataDispatcher\RequestDataDispatcher;
 use FormRelay\Request\Route\RequestRoute;
 
 class PardotRoute extends RequestRoute
