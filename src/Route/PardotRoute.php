@@ -47,4 +47,8 @@ class PardotRoute extends RequestRoute
             ],
         ],
     ];
+
+    const DEFAULT_HEADERS = parent::DEFAULT_HEADERS + [
+        'User-Agent' => self::KEYWORD_PASSTHROUGH,
+    ];
 }
