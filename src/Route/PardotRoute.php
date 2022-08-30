@@ -6,7 +6,13 @@ use FormRelay\Request\Route\RequestRoute;
 
 class PardotRoute extends RequestRoute
 {
-    const DEFAULT_COOKIES = ['visitor_id[0-9]+(-hash)?'];
+    const DEFAULT_COOKIES = parent::DEFAULT_COOKIES + [
+        'visitor_id[0-9]+(-hash)?'
+    ];
+
+    const DEFAULT_HEADERS = parent::DEFAULT_HEADERS + [
+        'User-Agent' => self::KEYWORD_PASSTHROUGH,
+    ];
 
     const DEFAULT_FIELDS = [
         'source' => ['field' => 'source'],
@@ -46,9 +52,5 @@ class PardotRoute extends RequestRoute
                 'unprocessedOnly' => true,
             ],
         ],
-    ];
-
-    const DEFAULT_HEADERS = parent::DEFAULT_HEADERS + [
-        'User-Agent' => self::KEYWORD_PASSTHROUGH,
     ];
 }
