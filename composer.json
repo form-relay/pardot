@@ -33,7 +33,7 @@
     ],
     "require": {
         "php": "^7.2",
-        "form-relay/request": "^2.0"
+        "form-relay/request": "dev-feature/LMSM22-105-route-context-updates"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0"
