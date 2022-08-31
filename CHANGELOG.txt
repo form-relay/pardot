@@ -1,4 +1,8 @@
 
+2.0.1
+
+[TASK] Update Default Headers for Pardot Route (LMSM22-105) (#2)
+
 2.0.0
 
 [FEATURE] Asynchronous Submissions
